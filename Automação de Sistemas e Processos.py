@@ -14,16 +14,12 @@
 # Para resolver isso, vamos usar o pyautogui, uma biblioteca de automação de comandos do mouse e do teclado
 
 # In[94]:
-
-
 #Instalar as bibliotecas
 # !pip install pyautogui
 # !pip install pyperclip
 
 
 # In[95]:
-
-
 #Passo 0: Importar as bibliotecas
 import pyautogui
 import pyperclip
@@ -50,23 +46,9 @@ sleep(2)
 pyautogui.click(398, 650) #baixar arquivo
 sleep(5) #espera do download
 
-
-# ## Testes
-
-# In[ ]:
-
-
-
-
-
-# ### Vamos agora ler o arquivo baixado para pegar os indicadores
-# 
-# - Faturamento
-# - Quantidade de Produtos
+# ### Vamos agora ler o arquivo baixado para pegar os indicadores de faturamento e quantidade de produtos.
 
 # In[96]:
-
-
 #Passo 4: Importar o arquivo para o python
 import pandas as pd
 
@@ -83,8 +65,6 @@ display(faturamento, qntd)
 # ### Vamos agora enviar um e-mail pelo gmail
 
 # In[97]:
-
-
 #Passo 6: enviar arquivo
 pyautogui.hotkey('ctrl', 't')
 pyperclip.copy('https://mail.google.com/mail/u/1/#inbox') 
@@ -117,8 +97,6 @@ pyautogui.hotkey('ctrl', 'enter') # Encaminhar email
 # - Lembre-se: a posição na sua tela é diferente da posição na minha tela
 
 # In[98]:
-
-
 sleep(3)
 pyautogui.position()
 
