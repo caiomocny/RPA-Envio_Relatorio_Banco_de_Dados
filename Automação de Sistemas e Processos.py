@@ -2,24 +2,18 @@
 # coding: utf-8
 
 # # Automação de Sistemas e Processos com Python
-# 
+
 # ### Desafio:
-# 
 # Todos os dias, o nosso sistema atualiza as vendas do dia anterior.
 # O seu trabalho diário, como analista, é enviar um e-mail para a diretoria, assim que começar a trabalhar, com o faturamento e a quantidade de produtos vendidos no dia anterior
-# 
 # E-mail da diretoria: seugmail+diretoria@gmail.com<br>
 # Local onde o sistema disponibiliza as vendas do dia anterior: https://drive.google.com/drive/folders/149xknr9JvrlEnhNWO49zPcw0PW5icxga?usp=sharing
-# 
 # Para resolver isso, vamos usar o pyautogui, uma biblioteca de automação de comandos do mouse e do teclado
 
-# In[94]:
 #Instalar as bibliotecas
 # !pip install pyautogui
 # !pip install pyperclip
 
-
-# In[95]:
 #Passo 0: Importar as bibliotecas
 import pyautogui
 import pyperclip
@@ -48,12 +42,10 @@ sleep(5) #espera do download
 
 # ### Vamos agora ler o arquivo baixado para pegar os indicadores de faturamento e quantidade de produtos.
 
-# In[96]:
 #Passo 4: Importar o arquivo para o python
 import pandas as pd
 
 tabela = pd.read_excel(r"C:\Users\caiom\Downloads\Vendas - Dez.xlsx")
-
 
 #Passo 5: Ler o arquivo e gerar os indicadores
 faturamento = tabela["Valor Final"].sum()
@@ -64,7 +56,6 @@ display(faturamento, qntd)
 
 # ### Vamos agora enviar um e-mail pelo gmail
 
-# In[97]:
 #Passo 6: enviar arquivo
 pyautogui.hotkey('ctrl', 't')
 pyperclip.copy('https://mail.google.com/mail/u/1/#inbox') 
