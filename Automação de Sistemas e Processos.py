@@ -90,13 +90,3 @@ Abs,
 Caio Mocny
 ''') # Escrever corpo do texto
 pyautogui.hotkey('ctrl', 'enter') # Encaminhar email
-
-
-# #### Use esse código para descobrir qual a posição de um item que queira clicar
-# 
-# - Lembre-se: a posição na sua tela é diferente da posição na minha tela
-
-# In[98]:
-sleep(3)
-pyautogui.position()
-
